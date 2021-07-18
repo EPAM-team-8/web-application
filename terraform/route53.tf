@@ -1,6 +1,6 @@
 resource "aws_route53_record" "www" {
-  zone_id = data.aws_route53_zone.Service-Two.zone_id
-  name    = "web.rabbit-mq.xyz"
+  zone_id = data.aws_route53_zone.web-zone.zone_id
+  name    = "web"
   type    = "A"
 
   alias {
