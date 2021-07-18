@@ -1,0 +1,5 @@
+---
+
+- src: 'https://github.com/EPAM-team-8/ansible-role-web-app.git'
+  name: web-application
+  version: 'develop'
