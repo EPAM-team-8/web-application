@@ -17,12 +17,13 @@ data "aws_route53_zone" "web-zone" {
   name         = "epam.one."
 }
 
-data "aws_subnet_ids" "main-subnets" {
+/*data "aws_subnet_ids" "main-subnets" {
   vpc_id = data.aws_vpc.my-vpc.id
   tags = {
     env = "test"
   }
 }
+*/
 
 data "aws_subnet" "private_subnet" {
   vpc_id = data.aws_vpc.my-vpc.id

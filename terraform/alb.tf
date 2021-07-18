@@ -8,7 +8,7 @@ resource "aws_lb" "web-app-alb" {
   security_groups = [
     data.aws_security_group.sg.id
   ]
-  subnets = data.aws_subnet_ids.main-subnets.ids
+  subnets = [data.aws_subnet.public_subnet.id, data.aws_subnet.private_subnet.id]
 }
 
 # ALB Listener
