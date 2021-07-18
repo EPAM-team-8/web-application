@@ -18,7 +18,7 @@ data "aws_route53_zone" "web-zone" {
 }
 
 data "aws_subnet_ids" "main-subnets" {
-  vpc_id = data.aws_vpc.epam-vpc.id
+  vpc_id = data.aws_vpc.my-vpc.id
   tags = {
     env = "test"
   }
