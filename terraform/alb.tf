@@ -6,7 +6,7 @@ resource "aws_lb" "web-app-alb" {
   load_balancer_type = "application"
 
   security_groups = [
-    data.aws_security_group.epam-sg.id
+    data.aws_security_group.sg.id
   ]
   subnets = data.aws_subnet_ids.main-subnets.ids
 }
@@ -29,7 +29,7 @@ resource "aws_lb_target_group" "web-app-tg" {
   name     = "web-app-tg"
   port     = "80"
   protocol = "HTTP"
-  vpc_id   = data.aws_vpc.epam-vpc.id
+  vpc_id   = data.aws_vpc.my-vpc.id
 
   health_check {
     path    = "/"
